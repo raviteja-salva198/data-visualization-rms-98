@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {GlobalStyles, Heading} from './styles/GlobalStyles';
+import BarChartComponent from './components/BarChart';
+import PieChartComponent from './components/PieChart';
+import LineChartComponent from './components/LineChart';
+import FunnelChartComponent from './components/FunnelChart';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <>
+    <GlobalStyles />
+    <Heading>Data Visualization Dashboard</Heading>
+    <BarChartComponent />
+    <PieChartComponent />
+    <LineChartComponent />
+    <FunnelChartComponent />
+  </>
+);
 
 export default App;
